@@ -48,11 +48,7 @@ def signup(request):
             messages.error(request,'Password Not Matched')
 
             return redirect('/')
-        bog = User.objects.get(username=username)
-        if bog is not None:
-            messages.error(request, 'Username already exists')
 
-            return redirect('/')
 
 
 
